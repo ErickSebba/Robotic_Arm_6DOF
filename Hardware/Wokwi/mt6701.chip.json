@@ -1,0 +1,15 @@
+{
+  "name": "MT6701",
+  "author": "BIMO",
+  "pins": ["VCC", "GND", "STEP", "DIR", "OUT"],
+  "controls": [
+    {
+      "id": "slip",
+      "label": "Passos perdidos por 1000",
+      "type": "range",
+      "min": 0,
+      "max": 100,
+      "step": 1
+    }
+  ]
+}

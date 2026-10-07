@@ -1,0 +1,887 @@
+{
+  "version": 1,
+  "author": "BIMO",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 260,
+      "left": -40,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "m1",
+      "top": -150,
+      "left": 170,
+      "attrs": {
+        "size": "17",
+        "arrow": "orange",
+        "display": "angle"
+      }
+    },
+    {
+      "type": "wokwi-a4988",
+      "id": "drv1",
+      "top": 60,
+      "left": 190,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "chip-mt6701",
+      "id": "enc1",
+      "top": 180,
+      "left": 190,
+      "attrs": {
+        "microsteps": "16",
+        "slip": "0"
+      }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "m2",
+      "top": -150,
+      "left": 320,
+      "attrs": {
+        "size": "17",
+        "arrow": "orange",
+        "display": "angle"
+      }
+    },
+    {
+      "type": "wokwi-a4988",
+      "id": "drv2",
+      "top": 60,
+      "left": 340,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "chip-mt6701",
+      "id": "enc2",
+      "top": 180,
+      "left": 340,
+      "attrs": {
+        "microsteps": "16",
+        "slip": "0"
+      }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "m3",
+      "top": -150,
+      "left": 470,
+      "attrs": {
+        "size": "17",
+        "arrow": "orange",
+        "display": "angle"
+      }
+    },
+    {
+      "type": "wokwi-a4988",
+      "id": "drv3",
+      "top": 60,
+      "left": 490,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "chip-mt6701",
+      "id": "enc3",
+      "top": 180,
+      "left": 490,
+      "attrs": {
+        "microsteps": "16",
+        "slip": "0"
+      }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "m4",
+      "top": -150,
+      "left": 620,
+      "attrs": {
+        "size": "17",
+        "arrow": "orange",
+        "display": "angle"
+      }
+    },
+    {
+      "type": "wokwi-a4988",
+      "id": "drv4",
+      "top": 60,
+      "left": 640,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "chip-mt6701",
+      "id": "enc4",
+      "top": 180,
+      "left": 640,
+      "attrs": {
+        "microsteps": "16",
+        "slip": "0"
+      }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "m5",
+      "top": -150,
+      "left": 770,
+      "attrs": {
+        "size": "17",
+        "arrow": "orange",
+        "display": "angle"
+      }
+    },
+    {
+      "type": "wokwi-a4988",
+      "id": "drv5",
+      "top": 60,
+      "left": 790,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "chip-mt6701",
+      "id": "enc5",
+      "top": 180,
+      "left": 790,
+      "attrs": {
+        "microsteps": "16",
+        "slip": "0"
+      }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "m6",
+      "top": -150,
+      "left": 920,
+      "attrs": {
+        "size": "17",
+        "arrow": "orange",
+        "display": "angle"
+      }
+    },
+    {
+      "type": "wokwi-a4988",
+      "id": "drv6",
+      "top": 60,
+      "left": 940,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "chip-mt6701",
+      "id": "enc6",
+      "top": 180,
+      "left": 940,
+      "attrs": {
+        "microsteps": "16",
+        "slip": "0"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX0",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "esp:D25",
+      "drv1:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D13",
+      "drv1:DIR",
+      "blue",
+      []
+    ],
+    [
+      "esp:D23",
+      "drv1:ENABLE",
+      "orange",
+      []
+    ],
+    [
+      "drv1:MS1",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv1:MS2",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv1:MS3",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv1:RESET",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv1:SLEEP",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv1:VDD",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv1:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "drv1:2B",
+      "m1:A-",
+      "gray",
+      []
+    ],
+    [
+      "drv1:2A",
+      "m1:A+",
+      "gray",
+      []
+    ],
+    [
+      "drv1:1A",
+      "m1:B+",
+      "gray",
+      []
+    ],
+    [
+      "drv1:1B",
+      "m1:B-",
+      "gray",
+      []
+    ],
+    [
+      "esp:D25",
+      "enc1:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D13",
+      "enc1:DIR",
+      "blue",
+      []
+    ],
+    [
+      "enc1:OUT",
+      "esp:VP",
+      "violet",
+      []
+    ],
+    [
+      "enc1:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "enc1:GND",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:D26",
+      "drv2:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D14",
+      "drv2:DIR",
+      "blue",
+      []
+    ],
+    [
+      "esp:D23",
+      "drv2:ENABLE",
+      "orange",
+      []
+    ],
+    [
+      "drv2:MS1",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv2:MS2",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv2:MS3",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv2:RESET",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv2:SLEEP",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv2:VDD",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv2:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "drv2:2B",
+      "m2:A-",
+      "gray",
+      []
+    ],
+    [
+      "drv2:2A",
+      "m2:A+",
+      "gray",
+      []
+    ],
+    [
+      "drv2:1A",
+      "m2:B+",
+      "gray",
+      []
+    ],
+    [
+      "drv2:1B",
+      "m2:B-",
+      "gray",
+      []
+    ],
+    [
+      "esp:D26",
+      "enc2:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D14",
+      "enc2:DIR",
+      "blue",
+      []
+    ],
+    [
+      "enc2:OUT",
+      "esp:VN",
+      "violet",
+      []
+    ],
+    [
+      "enc2:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "enc2:GND",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:D27",
+      "drv3:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D4",
+      "drv3:DIR",
+      "blue",
+      []
+    ],
+    [
+      "esp:D23",
+      "drv3:ENABLE",
+      "orange",
+      []
+    ],
+    [
+      "drv3:MS1",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv3:MS2",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv3:MS3",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv3:RESET",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv3:SLEEP",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv3:VDD",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv3:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "drv3:2B",
+      "m3:A-",
+      "gray",
+      []
+    ],
+    [
+      "drv3:2A",
+      "m3:A+",
+      "gray",
+      []
+    ],
+    [
+      "drv3:1A",
+      "m3:B+",
+      "gray",
+      []
+    ],
+    [
+      "drv3:1B",
+      "m3:B-",
+      "gray",
+      []
+    ],
+    [
+      "esp:D27",
+      "enc3:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D4",
+      "enc3:DIR",
+      "blue",
+      []
+    ],
+    [
+      "enc3:OUT",
+      "esp:D34",
+      "violet",
+      []
+    ],
+    [
+      "enc3:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "enc3:GND",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:RX2",
+      "drv4:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D19",
+      "drv4:DIR",
+      "blue",
+      []
+    ],
+    [
+      "esp:D23",
+      "drv4:ENABLE",
+      "orange",
+      []
+    ],
+    [
+      "drv4:MS1",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv4:MS2",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv4:MS3",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv4:RESET",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv4:SLEEP",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv4:VDD",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv4:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "drv4:2B",
+      "m4:A-",
+      "gray",
+      []
+    ],
+    [
+      "drv4:2A",
+      "m4:A+",
+      "gray",
+      []
+    ],
+    [
+      "drv4:1A",
+      "m4:B+",
+      "gray",
+      []
+    ],
+    [
+      "drv4:1B",
+      "m4:B-",
+      "gray",
+      []
+    ],
+    [
+      "esp:RX2",
+      "enc4:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D19",
+      "enc4:DIR",
+      "blue",
+      []
+    ],
+    [
+      "enc4:OUT",
+      "esp:D35",
+      "violet",
+      []
+    ],
+    [
+      "enc4:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "enc4:GND",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:TX2",
+      "drv5:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D21",
+      "drv5:DIR",
+      "blue",
+      []
+    ],
+    [
+      "esp:D23",
+      "drv5:ENABLE",
+      "orange",
+      []
+    ],
+    [
+      "drv5:MS1",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv5:MS2",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv5:MS3",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv5:RESET",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv5:SLEEP",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv5:VDD",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv5:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "drv5:2B",
+      "m5:A-",
+      "gray",
+      []
+    ],
+    [
+      "drv5:2A",
+      "m5:A+",
+      "gray",
+      []
+    ],
+    [
+      "drv5:1A",
+      "m5:B+",
+      "gray",
+      []
+    ],
+    [
+      "drv5:1B",
+      "m5:B-",
+      "gray",
+      []
+    ],
+    [
+      "esp:TX2",
+      "enc5:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D21",
+      "enc5:DIR",
+      "blue",
+      []
+    ],
+    [
+      "enc5:OUT",
+      "esp:D32",
+      "violet",
+      []
+    ],
+    [
+      "enc5:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "enc5:GND",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:D18",
+      "drv6:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D22",
+      "drv6:DIR",
+      "blue",
+      []
+    ],
+    [
+      "esp:D23",
+      "drv6:ENABLE",
+      "orange",
+      []
+    ],
+    [
+      "drv6:MS1",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv6:MS2",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv6:MS3",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv6:RESET",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv6:SLEEP",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv6:VDD",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "drv6:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "drv6:2B",
+      "m6:A-",
+      "gray",
+      []
+    ],
+    [
+      "drv6:2A",
+      "m6:A+",
+      "gray",
+      []
+    ],
+    [
+      "drv6:1A",
+      "m6:B+",
+      "gray",
+      []
+    ],
+    [
+      "drv6:1B",
+      "m6:B-",
+      "gray",
+      []
+    ],
+    [
+      "esp:D18",
+      "enc6:STEP",
+      "green",
+      []
+    ],
+    [
+      "esp:D22",
+      "enc6:DIR",
+      "blue",
+      []
+    ],
+    [
+      "enc6:OUT",
+      "esp:D33",
+      "violet",
+      []
+    ],
+    [
+      "enc6:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "enc6:GND",
+      "esp:GND.2",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
