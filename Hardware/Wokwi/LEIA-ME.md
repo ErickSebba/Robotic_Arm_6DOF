@@ -17,6 +17,9 @@ A pinagem vem de `netlist.py`, a mesma fonte que gera o esquemático do Fusion.
    - `mt6701.chip.json`
 4. Clique em **Play**. O Wokwi compila o chip customizado e o firmware na nuvem.
 
+### Abrindo pelo Link
+1. Entrar no Link: https://wokwi.com/projects/477252811056900097
+
 ## Testar (Serial Monitor, 115200)
 
 ```
